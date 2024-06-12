@@ -1,4 +1,7 @@
 const sections = document.querySelectorAll('.section-fade');
+
+// fade in with observer
+
 const sectionVisible = (entries, observer) => {
     entries.forEach(entry => {
         if (!entry.isIntersecting) return;
@@ -13,4 +16,16 @@ const sectionObserver = new IntersectionObserver(sectionVisible, {
 });
 sections.forEach(section => {
     sectionObserver.observe(section);
+});
+
+// fade in with on scroll (observer sometimes doesn't work well on mobile)
+
+document.addEventListener('scroll', () => {
+    const pageBottom = window.scrollY + window.innerHeight;
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageBottom > sectionTop) {
+            section.classList.add('section-visible');
+        }
+    });
 });
