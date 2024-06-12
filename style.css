@@ -74,26 +74,11 @@ main {
     padding: 32px;
     padding-bottom: 200px;
 }
-main video {
+#trailer-video {
     aspect-ratio: 560 / 315;
     width: 100%;
     border-radius: 10px;
     background-color: #5a9d70;
-}
-main video::-webkit-media-controls {
-    opacity: 0 !important;
-}
-main video::-moz-media-controls {
-    opacity: 0 !important;
-}
-main video::-ms-media-controls {
-    opacity: 0 !important;
-}
-main video::-o-media-controls {
-    opacity: 0 !important;
-}
-main video::media-controls {
-    opacity: 0 !important;
 }
 #trailer {
     display: flex;

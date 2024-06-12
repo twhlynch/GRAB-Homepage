@@ -29,3 +29,10 @@ document.addEventListener('scroll', () => {
         }
     });
 });
+
+// hidden trailer controls
+
+const trailer = document.getElementById('trailer-video');
+trailer.addEventListener('click', () => {
+    trailer.paused? trailer.play() : trailer.pause();
+});
