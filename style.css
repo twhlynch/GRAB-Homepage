@@ -67,6 +67,7 @@ header a:hover {
 }
 header .buttons {
     padding: 0;
+    justify-content: center;
 }
 
 /* content */
@@ -125,7 +126,7 @@ section a:hover {
     justify-content: flex-start;
     align-items: center;
     gap: 1.5rem;
-    padding: 32px 0 0;
+    padding: 1rem 0 0;
 }
 .buttons-mid {
     justify-content: center;
