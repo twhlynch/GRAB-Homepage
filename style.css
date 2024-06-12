@@ -39,7 +39,7 @@ header {
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
-    background-image: url(header.png);
+    background-image: url(./header.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
