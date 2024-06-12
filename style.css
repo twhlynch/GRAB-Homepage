@@ -75,7 +75,6 @@ main {
     margin: 0 auto;
     max-width: 800px;
     padding: 32px;
-    padding-bottom: 200px;
 }
 #trailer-video {
     aspect-ratio: 560 / 315;
@@ -138,10 +137,7 @@ footer {
     color: var(--light);
     text-align: center;
     font-size: 0.8em;
-    margin-top: auto;
     padding-inline: 4.5rem;
-
-    position: relative;
 }
 footer > nav {
     margin-inline: auto;
@@ -174,17 +170,26 @@ footer > nav > nav {
     fill: var(--light);
 }
 
-#player {
-    position: absolute;
-    bottom: 100%;
-    left: 20px;
+
+#players {
+    margin-top: auto;
     height: 200px;
+    display: flex;
+    flex-direction: row;
+    place-content: center;
 }
-#editor {
-    position: absolute;
-    bottom: 100%;
-    right: 20px;
-    height: 200px;
+#players div {
+    height: 100%;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 1rem;
+    max-width: 900px;
+    display: flex;
+    flex-direction: row;
+    place-content: space-between;
+}
+#players img {
+    height: 100%;
 }
 
 @media screen and (max-width: 680px) {
@@ -216,10 +221,7 @@ footer > nav > nav {
         width: 100%;
         gap: 1rem;
     }
-    #player, #editor {
+    #players {
         height: 120px;
-    } 
-    main {
-        padding-bottom: 120px;
     }
 }
