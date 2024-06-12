@@ -164,12 +164,6 @@ footer > nav > nav {
     flex-direction: column;
     min-width: fit-content;
 }
-#copy a svg {
-    width: 1rem;
-    height: 1rem;
-    fill: var(--light);
-}
-
 
 #players {
     margin-top: auto;
