@@ -43,7 +43,7 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    min-height: 400px;
+    max-height: 400px;
     padding-bottom: 16px;
 }
 header nav {
@@ -66,6 +66,11 @@ header nav a:hover {
     background-color: var(--light);
     text-shadow: none;
     color: var(--dark);
+}
+header img {
+    width: 80%;
+    height: auto;
+    max-width: 400px;
 }
 header h2 {
     text-shadow: 2px 1px 0 var(--dark);
@@ -99,14 +104,12 @@ section {
 .section-fade {
     opacity: 0;
     transform: translateY(5vh);
-    visibility: hidden;
     transition: opacity 0.3s ease-out, transform 0.5s ease-out;
     will-change: opacity, visibility;
 }
 .section-fade.section-visible {
     opacity: 1;
     transform: none;
-    visibility: visible;
 }
 #store-pages {
     display: flex;
@@ -191,6 +194,10 @@ footer > nav > nav {
     header nav {
         gap: 0.5rem;
         padding: 16px 16px;
+        font-size: 1rem;
+    }
+    header h2 {
+        font-size: 1.2rem;
     }
 }
 @media screen and (max-width: 1080px) {
@@ -204,5 +211,20 @@ footer > nav > nav {
     }
     footer > nav {
         padding-block: 1.5rem;
+    }
+}
+@media screen and (max-width: 580px) {
+    footer > nav {
+        flex-direction: column-reverse;
+        padding-inline: 0.5rem;
+    }
+    #copy {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        gap: 1rem;
+    }
+    header nav {
+        gap: 0;
     }
 }
